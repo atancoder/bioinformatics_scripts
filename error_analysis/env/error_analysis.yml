@@ -1,0 +1,11 @@
+name: error_analysis
+channels:
+  - bioconda
+  - conda-forge
+  - defaults
+  - anaconda
+dependencies:
+  - bioframe
+  - python>=3.6
+  - pandas
+  - ipykernel
