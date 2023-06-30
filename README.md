@@ -1,2 +1,2 @@
-# anthonys_scripts
+# Anthonys Scripts
 Anthony's Random Scripts for Bioinformatics
