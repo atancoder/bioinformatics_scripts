@@ -4,16 +4,15 @@ import time
 from typing import Dict, List, NamedTuple, Set, Tuple
 
 import pandas as pd
+
 from df_loader import DFLoader
-from overlaps import (
-    compute_all_overlaps,
-    read_overlaps_from_file,
-    write_overlaps_to_file,
-)
+from overlaps import (compute_all_overlaps, read_overlaps_from_file,
+                      write_overlaps_to_file)
 from schema import DFSchema
 
 CRISPR_FILENAME = "resources/example/EPCrisprBenchmark_Fulco2019_K562_GRCh38.tsv.gz"
-PRED_FILENAME = "resources/example/ABC_K562_Fulco2019Genes_GRCh38.tsv.gz"
+# PRED_FILENAME = "resources/example/ABC_K562_Fulco2019Genes_GRCh38.tsv.gz"
+PRED_FILENAME = "/Users/atan5133/coding/ABC-Enhancer-Gene-Prediction/results/results_kristy/EnhancerPredictionsAllPutative.txt.gz"
 OVERLAP_FILENAME = "overlaps.csv"
 ABC_THRESHOLD = 0.02
 TSS_REF_FILE = "resources/genome_annotations/RefSeqCurated.170308.bed.CollapsedGeneBounds.hg38.TSS500bp.bed"
