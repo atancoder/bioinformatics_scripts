@@ -2,6 +2,7 @@ from abc import ABC, abstractmethod
 
 import numpy as np
 import pandas as pd
+
 from schema import DFSchema
 
 
@@ -59,9 +60,9 @@ class FalseNeg(CategoryLabeler):
         return super().summarize_category_count(df).filter([True])
 
 
-class DistToTSSCategory(CategoryLabeler):
-    SMALL = 1e5  # 100KB
-    MEDIUM = 1e6  # 1 MB
+class DistToTSSSize(CategoryLabeler):
+    SMALL = 1e4  # 10KB
+    MEDIUM = 1e5  # 100KB
 
     @classmethod
     def categorize_distance(cls, abs_dist_to_tss: int) -> str:
@@ -76,3 +77,28 @@ class DistToTSSCategory(CategoryLabeler):
     def get_values(cls, df: pd.DataFrame) -> pd.Series:
         dist_to_tss = np.abs(df[DFSchema.dist_to_tss + DFSchema.crispr_suffix])
         return dist_to_tss.apply(cls.categorize_distance)
+    
+class Top5Gene(CategoryLabeler):
+    # Class works a bit different than other labelers because
+    # we don't need to create a new column
+
+    @classmethod
+    def get_values(cls, df: pd.DataFrame) -> pd.Series:
+        """
+        Values of the category column
+        e.g pd.Series(["false_pos", "false_pos", "false_neg", ...])
+        """
+        raise NotImplementedError()
+    
+    @classmethod
+    def create_category(cls, df: pd.DataFrame) -> None:
+        return
+    
+    @classmethod
+    def summarize_category_count(cls, df: pd.DataFrame) -> pd.Series:
+        name = cls.name()
+        top_5 = df[DFSchema.target_gene + DFSchema.crispr_suffix].value_counts()[:5]
+        top_5 = top_5.rename_axis(name)
+        return top_5
+    
+

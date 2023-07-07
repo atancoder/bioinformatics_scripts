@@ -3,10 +3,11 @@ from abc import ABC, abstractmethod
 from typing import Dict, List, NamedTuple, Set, Tuple, Type
 
 import pandas as pd
-from category_labelers import CategoryLabeler, DistToTSSCategory, FalseNeg, FalsePos
+
+from category_labelers import *
 from schema import DFSchema
 
-LABELERS: List[Type[CategoryLabeler]] = [FalsePos, FalseNeg, DistToTSSCategory]
+LABELERS: List[Type[CategoryLabeler]] = [FalsePos, FalseNeg, DistToTSSSize, Top5Gene]
 
 
 def get_misclassifications(overlap_df: pd.DataFrame) -> pd.DataFrame:
@@ -16,6 +17,9 @@ def get_misclassifications(overlap_df: pd.DataFrame) -> pd.DataFrame:
     ].reset_index()
 
 
-def label_misclassifications(df: pd.DataFrame) -> None:
+def label_misclassifications(misclass_df: pd.DataFrame) -> None:
     for labeler in LABELERS:
-        labeler.create_category(df)
+        labeler.create_category(misclass_df)
+
+def groupby_gene(misclass_df: pd.DataFrame) -> Dict[str, List[int]]:
+    return misclass_df.groupby([DFSchema.target_gene + DFSchema.crispr_suffix]).groups
