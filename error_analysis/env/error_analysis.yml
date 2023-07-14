@@ -6,6 +6,6 @@ channels:
   - anaconda
 dependencies:
   - bioframe
-  - python>=3.6
+  - python=3.9
   - pandas
   - ipykernel

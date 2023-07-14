@@ -5,22 +5,25 @@ from typing import Dict, List, NamedTuple, Set, Tuple
 
 import bioframe as bf
 import pandas as pd
+
 from schema import DFSchema
+
+OVERLAP_SUFFIXES = ["_a", "_b"]
 
 
 def compute_all_overlaps(
-    crispr_df: pd.DataFrame, pred_df: pd.DataFrame
+    df_a: pd.DataFrame, df_b: pd.DataFrame, suffixes=OVERLAP_SUFFIXES
 ) -> pd.DataFrame:
-    cols = [DFSchema.chrom, DFSchema.start, DFSchema.end]
+    cols = [DFSchema.CHROM, DFSchema.START, DFSchema.END]
     overlap_df = bf.overlap(
-        crispr_df,
-        pred_df,
+        df_a,
+        df_b,
         how="inner",
         return_index=True,
         cols1=cols,
         cols2=cols,
-        on=[DFSchema.target_gene],
-        suffixes=(DFSchema.crispr_suffix, DFSchema.pred_suffix),
+        on=[DFSchema.TARGET_GENE],
+        suffixes=suffixes,
     )
     return overlap_df
 

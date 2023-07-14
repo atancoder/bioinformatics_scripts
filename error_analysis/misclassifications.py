@@ -12,8 +12,8 @@ LABELERS: List[Type[CategoryLabeler]] = [FalsePos, FalseNeg, DistToTSSSize, Top5
 
 def get_misclassifications(overlap_df: pd.DataFrame) -> pd.DataFrame:
     return overlap_df[
-        overlap_df[DFSchema.is_significant + DFSchema.crispr_suffix]
-        != overlap_df[DFSchema.is_significant + DFSchema.pred_suffix]
+        overlap_df[DFSchema.IS_SIGNIFICANT + DFSchema.CRISPR_SUFFIX]
+        != overlap_df[DFSchema.IS_SIGNIFICANT + DFSchema.PRED_SUFFIX]
     ].reset_index()
 
 
@@ -21,5 +21,6 @@ def label_misclassifications(misclass_df: pd.DataFrame) -> None:
     for labeler in LABELERS:
         labeler.create_category(misclass_df)
 
+
 def groupby_gene(misclass_df: pd.DataFrame) -> Dict[str, List[int]]:
-    return misclass_df.groupby([DFSchema.target_gene + DFSchema.crispr_suffix]).groups
+    return misclass_df.groupby([DFSchema.TARGET_GENE + DFSchema.CRISPR_SUFFIX]).groups

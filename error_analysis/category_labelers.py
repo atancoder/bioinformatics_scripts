@@ -39,8 +39,8 @@ class CategoryLabeler(ABC):
 class FalsePos(CategoryLabeler):
     @classmethod
     def get_values(cls, df: pd.DataFrame) -> pd.Series:
-        return (df[DFSchema.is_significant + DFSchema.crispr_suffix] == False) & (
-            df[DFSchema.is_significant + DFSchema.pred_suffix] == True
+        return (df[DFSchema.IS_SIGNIFICANT + DFSchema.CRISPR_SUFFIX] == False) & (
+            df[DFSchema.IS_SIGNIFICANT + DFSchema.PRED_SUFFIX] == True
         )
 
     @classmethod
@@ -51,8 +51,8 @@ class FalsePos(CategoryLabeler):
 class FalseNeg(CategoryLabeler):
     @classmethod
     def get_values(cls, df: pd.DataFrame) -> pd.Series:
-        return (df[DFSchema.is_significant + DFSchema.crispr_suffix] == True) & (
-            df[DFSchema.is_significant + DFSchema.pred_suffix] == False
+        return (df[DFSchema.IS_SIGNIFICANT + DFSchema.CRISPR_SUFFIX] == True) & (
+            df[DFSchema.IS_SIGNIFICANT + DFSchema.PRED_SUFFIX] == False
         )
 
     @classmethod
@@ -75,9 +75,10 @@ class DistToTSSSize(CategoryLabeler):
 
     @classmethod
     def get_values(cls, df: pd.DataFrame) -> pd.Series:
-        dist_to_tss = np.abs(df[DFSchema.dist_to_tss + DFSchema.crispr_suffix])
+        dist_to_tss = np.abs(df[DFSchema.DIST_TO_TSS + DFSchema.CRISPR_SUFFIX])
         return dist_to_tss.apply(cls.categorize_distance)
-    
+
+
 class Top5Gene(CategoryLabeler):
     # Class works a bit different than other labelers because
     # we don't need to create a new column
@@ -89,16 +90,14 @@ class Top5Gene(CategoryLabeler):
         e.g pd.Series(["false_pos", "false_pos", "false_neg", ...])
         """
         raise NotImplementedError()
-    
+
     @classmethod
     def create_category(cls, df: pd.DataFrame) -> None:
         return
-    
+
     @classmethod
     def summarize_category_count(cls, df: pd.DataFrame) -> pd.Series:
         name = cls.name()
-        top_5 = df[DFSchema.target_gene + DFSchema.crispr_suffix].value_counts()[:5]
+        top_5 = df[DFSchema.TARGET_GENE + DFSchema.CRISPR_SUFFIX].value_counts()[:5]
         top_5 = top_5.rename_axis(name)
         return top_5
-    
-
