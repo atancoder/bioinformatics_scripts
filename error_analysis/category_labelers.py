@@ -44,7 +44,7 @@ class FalsePos(CategoryLabeler):
         )
 
     @classmethod
-    def summarize_category_count(cls, df: pd.DataFrame) -> str:
+    def summarize_category_count(cls, df: pd.DataFrame) -> pd.Series:
         return super().summarize_category_count(df).filter([True])
 
 
@@ -56,22 +56,23 @@ class FalseNeg(CategoryLabeler):
         )
 
     @classmethod
-    def summarize_category_count(cls, df: pd.DataFrame) -> str:
+    def summarize_category_count(cls, df: pd.DataFrame) -> pd.Series:
         return super().summarize_category_count(df).filter([True])
 
 
 class DistToTSSSize(CategoryLabeler):
-    SMALL = 1e4  # 10KB
-    MEDIUM = 1e5  # 100KB
+    SMALL = int(1e4)  # 10KB
+    MEDIUM = int(1e5)  # 100KB
+
 
     @classmethod
     def categorize_distance(cls, abs_dist_to_tss: int) -> str:
         if abs_dist_to_tss <= cls.SMALL:
-            return "small"
+            return f"small (<= {cls.SMALL} bp)"
         elif abs_dist_to_tss <= cls.MEDIUM:
-            return "medium"
+            return f"medium (<= {cls.MEDIUM} bp)"
         else:
-            return "large"
+            return f"large (> {cls.MEDIUM} bp)"
 
     @classmethod
     def get_values(cls, df: pd.DataFrame) -> pd.Series:
@@ -101,3 +102,15 @@ class Top5Gene(CategoryLabeler):
         top_5 = df[DFSchema.TARGET_GENE + DFSchema.CRISPR_SUFFIX].value_counts()[:5]
         top_5 = top_5.rename_axis(name)
         return top_5
+
+class MultiplePredictions(CategoryLabeler):
+    @classmethod
+    def create_category(cls, df: pd.DataFrame) -> None:
+        # no-op since category is already created
+        return
+
+    @classmethod
+    def summarize_category_count(cls, df: pd.DataFrame) -> pd.Series:
+        column_name = DFSchema.FROM_MULTIPLE_PREDICTIONS
+        col = df[column_name]
+        return col.value_counts().filter([True])

@@ -34,7 +34,7 @@ class DFLoader(ABC):
         # filter out rows with genes not in tss_df
         orig_df = orig_df[
             orig_df[DFSchema.TARGET_GENE].isin(self.tss_df[DFSchema.TARGET_GENE])
-        ].reset_index()
+        ].reset_index(drop=True)
 
         # Use self.tss_df for the target_gene_tss
         merged_df = pd.merge(

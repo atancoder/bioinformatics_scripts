@@ -19,6 +19,8 @@ class DFSchema:
     CRISPR_SUFFIX = "_crispr"
     PRED_SUFFIX = "_pred"
 
+    FROM_MULTIPLE_PREDICTIONS = "from_mult_pred"
+
     @classmethod
     def get_crispr_schema_map(cls) -> Dict[str, str]:
         return {

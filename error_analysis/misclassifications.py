@@ -7,14 +7,14 @@ import pandas as pd
 from category_labelers import *
 from schema import DFSchema
 
-LABELERS: List[Type[CategoryLabeler]] = [FalsePos, FalseNeg, DistToTSSSize, Top5Gene]
+LABELERS: List[Type[CategoryLabeler]] = [FalsePos, FalseNeg, DistToTSSSize, Top5Gene, MultiplePredictions]
 
 
 def get_misclassifications(overlap_df: pd.DataFrame) -> pd.DataFrame:
     return overlap_df[
         overlap_df[DFSchema.IS_SIGNIFICANT + DFSchema.CRISPR_SUFFIX]
         != overlap_df[DFSchema.IS_SIGNIFICANT + DFSchema.PRED_SUFFIX]
-    ].reset_index()
+    ].reset_index(drop=True)
 
 
 def label_misclassifications(misclass_df: pd.DataFrame) -> None:
