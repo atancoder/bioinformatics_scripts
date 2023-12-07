@@ -3,11 +3,17 @@ from abc import ABC, abstractmethod
 from typing import Dict, List, NamedTuple, Set, Tuple, Type
 
 import pandas as pd
-
 from category_labelers import *
 from schema import DFSchema
 
-LABELERS: List[Type[CategoryLabeler]] = [FalsePos, FalseNeg, DistToTSSSize, Top5Gene, MultiplePredictions]
+LABELERS: List[Type[CategoryLabeler]] = [
+    FalsePos,
+    FalseNeg,
+    DistToTSSSize,
+    Top5Gene,
+    MultiplePredictions,
+    EnhancerSize,
+]
 
 
 def get_misclassifications(overlap_df: pd.DataFrame) -> pd.DataFrame:

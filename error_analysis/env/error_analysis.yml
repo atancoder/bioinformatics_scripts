@@ -9,3 +9,6 @@ dependencies:
   - python=3.9
   - pandas
   - ipykernel
+  - mplcursors
+  - ipympl
+  - click

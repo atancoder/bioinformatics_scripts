@@ -2,7 +2,6 @@ from abc import ABC, abstractmethod
 
 import numpy as np
 import pandas as pd
-
 from schema import DFSchema
 
 
@@ -20,7 +19,7 @@ class CategoryLabeler(ABC):
     @abstractmethod
     def get_values(cls, df: pd.DataFrame) -> pd.Series:
         """
-        Values of the category column
+        Returns the values of the category column
         e.g pd.Series(["false_pos", "false_pos", "false_neg", ...])
         """
         raise NotImplementedError()
@@ -64,7 +63,6 @@ class DistToTSSSize(CategoryLabeler):
     SMALL = int(1e4)  # 10KB
     MEDIUM = int(1e5)  # 100KB
 
-
     @classmethod
     def categorize_distance(cls, abs_dist_to_tss: int) -> str:
         if abs_dist_to_tss <= cls.SMALL:
@@ -103,6 +101,7 @@ class Top5Gene(CategoryLabeler):
         top_5 = top_5.rename_axis(name)
         return top_5
 
+
 class MultiplePredictions(CategoryLabeler):
     @classmethod
     def create_category(cls, df: pd.DataFrame) -> None:
@@ -114,3 +113,22 @@ class MultiplePredictions(CategoryLabeler):
         column_name = DFSchema.FROM_MULTIPLE_PREDICTIONS
         col = df[column_name]
         return col.value_counts().filter([True])
+
+
+class EnhancerSize(CategoryLabeler):
+    NORMAL = 500
+
+    @classmethod
+    def categorize_size(cls, size: int) -> str:
+        if size == cls.NORMAL:
+            return f"Normal"
+        else:
+            return f"Large"
+
+    @classmethod
+    def get_values(cls, df: pd.DataFrame) -> pd.Series:
+        size = (
+            df[DFSchema.END + DFSchema.PRED_SUFFIX]
+            - df[DFSchema.START + DFSchema.PRED_SUFFIX]
+        )
+        return size.apply(cls.categorize_size)

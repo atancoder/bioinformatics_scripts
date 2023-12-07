@@ -2,9 +2,9 @@ import csv
 import os
 import time
 from typing import Dict, List, NamedTuple, Set, Tuple
-import numpy as np
 
 import bioframe as bf
+import numpy as np
 import pandas as pd
 
 from schema import DFSchema
@@ -31,8 +31,10 @@ def compute_all_overlaps(
     )
     return overlap_df
 
+
 def compute_crispr_overlaps(
-    crispr_df: pd.DataFrame, pred_df: pd.DataFrame, 
+    crispr_df: pd.DataFrame,
+    pred_df: pd.DataFrame,
 ) -> pd.DataFrame:
     """
     For each E-G pair in CRISPR df, finds the entry from pred_df that overlaps it
@@ -51,14 +53,20 @@ def compute_crispr_overlaps(
         on=[DFSchema.TARGET_GENE],
         suffixes=[DFSchema.CRISPR_SUFFIX, DFSchema.PRED_SUFFIX],
     )
-    overlap_df[DFSchema.IS_SIGNIFICANT + DFSchema.PRED_SUFFIX].fillna(False, inplace=True)
+    overlap_df[DFSchema.IS_SIGNIFICANT + DFSchema.PRED_SUFFIX].fillna(
+        False, inplace=True
+    )
     return overlap_df
 
-def merge_multiple_predictions(overlap_df: pd.DataFrame, agg_fn=np.mean) -> pd.DataFrame:
+
+def merge_multiple_predictions(
+    overlap_df: pd.DataFrame, threshold: float, agg_fn=np.max
+) -> pd.DataFrame:
     """
-    When there are multiple matching predictions for a crispri experiment, 
-    we aggregate the scores (default mean)
+    When there are multiple matching predictions for a crispri experiment,
+    we aggregate the ABC scores (default max)
     """
+    score_col = "ABC.Score" + DFSchema.PRED_SUFFIX
     name_col = "name" + DFSchema.CRISPR_SUFFIX
     duplicated_names = overlap_df[overlap_df.duplicated(name_col)][name_col]
     new_df = overlap_df.drop_duplicates(subset=[name_col]).reset_index(drop=True)
@@ -66,9 +74,15 @@ def merge_multiple_predictions(overlap_df: pd.DataFrame, agg_fn=np.mean) -> pd.D
 
     for name in duplicated_names:
         entries = overlap_df[overlap_df[name_col] == name]
-        new_score = agg_fn(entries["ABC.Score" + DFSchema.PRED_SUFFIX])
-        new_entry = new_df[new_df[name_col] == name].index  # Should only be 1 b/c we removed duplicates
-        new_df.loc[new_entry, "ABC.Score" + DFSchema.PRED_SUFFIX] = new_score
+        new_score = agg_fn(entries[score_col])
+        new_entry = new_df[
+            new_df[name_col] == name
+        ].index  # Should only be 1 b/c we removed duplicates
+        new_df.loc[new_entry, score_col] = new_score
+        # update isSignificant
+        new_df[DFSchema.IS_SIGNIFICANT + DFSchema.PRED_SUFFIX] = (
+            new_df[score_col] >= threshold
+        )
         new_df.loc[new_entry, DFSchema.FROM_MULTIPLE_PREDICTIONS] = True
     return new_df
 

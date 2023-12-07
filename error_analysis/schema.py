@@ -13,7 +13,7 @@ class DFSchema:
     END = "end"
     TARGET_GENE = "TargetGene"
     TARGET_GENE_TSS = "TargetGeneTSS"
-    IS_SIGNIFICANT = "IsSignficant"
+    IS_SIGNIFICANT = "IsSignificant"
     DIST_TO_TSS = "DistanceToTSS"
 
     CRISPR_SUFFIX = "_crispr"
@@ -54,7 +54,7 @@ class DFSchema:
         schema_map = cls.get_pred_schema_map()
         df = df.rename(columns=schema_map)
         cls.add_dist_to_gene_col(df)
-        df[cls.IS_SIGNIFICANT] = df["powerlaw.Score"] >= threshold
+        df[cls.IS_SIGNIFICANT] = df["ABC.Score"] >= threshold
         return df
 
     @classmethod
