@@ -119,8 +119,8 @@ class EnhancerSize(CategoryLabeler):
     NORMAL = 500
 
     @classmethod
-    def categorize_size(cls, size: int) -> str:
-        if size == cls.NORMAL:
+    def categorize_size(cls, size: float) -> str:
+        if pd.isna(size) or size == cls.NORMAL:
             return f"Normal"
         else:
             return f"Large"
