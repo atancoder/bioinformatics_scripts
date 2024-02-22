@@ -60,13 +60,16 @@ def compute_crispr_overlaps(
 
 
 def merge_multiple_predictions(
-    overlap_df: pd.DataFrame, threshold: float, agg_fn=np.max
+    overlap_df: pd.DataFrame,
+    threshold: float,
+    score_col: str = "ABC.Score",
+    agg_fn=np.max,
 ) -> pd.DataFrame:
     """
     When there are multiple matching predictions for a crispri experiment,
     we aggregate the ABC scores (default max)
     """
-    score_col = "ABC.Score" + DFSchema.PRED_SUFFIX
+    score_col = score_col + DFSchema.PRED_SUFFIX
     name_col = "name" + DFSchema.CRISPR_SUFFIX
     duplicated_names = overlap_df[overlap_df.duplicated(name_col)][name_col]
     new_df = overlap_df.drop_duplicates(subset=[name_col]).reset_index(drop=True)

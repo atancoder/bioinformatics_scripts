@@ -50,11 +50,13 @@ class DFSchema:
         return df
 
     @classmethod
-    def schematize_pred_df(cls, df: pd.DataFrame, threshold: float) -> pd.DataFrame:
+    def schematize_pred_df(
+        cls, df: pd.DataFrame, threshold: float, score_col: str
+    ) -> pd.DataFrame:
         schema_map = cls.get_pred_schema_map()
         df = df.rename(columns=schema_map)
         cls.add_dist_to_gene_col(df)
-        df[cls.IS_SIGNIFICANT] = df["ABC.Score"] >= threshold
+        df[cls.IS_SIGNIFICANT] = df[score_col] >= threshold
         return df
 
     @classmethod

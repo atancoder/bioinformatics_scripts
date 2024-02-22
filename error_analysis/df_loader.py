@@ -50,13 +50,18 @@ class DFLoader(ABC):
 
 class PredDFLoader(DFLoader):
     def __init__(
-        self, filename_tsv: str, tss_filename_bed: str, abc_threshold: float
+        self,
+        filename_tsv: str,
+        tss_filename_bed: str,
+        threshold: float,
+        score_col: str = "ABC.Score",
     ) -> None:
         super().__init__(filename_tsv, tss_filename_bed)
-        self.abc_threshold = abc_threshold
+        self.threshold = threshold
+        self.score_col = score_col
 
     def load(self) -> pd.DataFrame:
-        self.df = DFSchema.schematize_pred_df(self.df, self.abc_threshold)
+        self.df = DFSchema.schematize_pred_df(self.df, self.threshold, self.score_col)
         self.df = self._standardize_gene_tss(self.df)
         return self.df
 
