@@ -29,7 +29,7 @@ class DFSchema:
             "chromEnd": cls.END,
             "measuredGeneSymbol": cls.TARGET_GENE,
             "startTSS": cls.TARGET_GENE_TSS,
-            "Significant": cls.IS_SIGNIFICANT,
+            "Regulated": cls.IS_SIGNIFICANT,
         }
 
     @classmethod

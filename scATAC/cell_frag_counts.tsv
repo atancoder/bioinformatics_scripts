@@ -1,109 +1,109 @@
-cell_type	num_fragments
-Endothelial Cell (General) 2.fragments.bed.gz	1469
-Type I Skeletal Myocyte.fragments.bed.gz	2578
-T lymphocyte 2 (CD4+).fragments.bed.gz	586622
-Macrophage (General).fragments.bed.gz	971185
-Microglia.fragments.bed.gz	976945
-Small Intestinal Enterocyte.fragments.bed.gz	1235541
-Fibroblast (Liver Adrenal).fragments.bed.gz	2989
-Hepatocyte.fragments.bed.gz	1640709
-Colon Epithelial Cell 2.fragments.bed.gz	2023056
-Pancreatic Alpha Cell 1.fragments.bed.gz	1915601
-Enterochromaffin Cell.fragments.bed.gz	2369805
-Ductal Cell (Pancreatic).fragments.bed.gz	2941590
-Oligodendrocyte.fragments.bed.gz	1407972
-Pancreatic Alpha Cell 2.fragments.bed.gz	3055582
-Adipocyte.fragments.bed.gz	3374373
-Smooth Muscle (Colon) 2.fragments.bed.gz	3672027
-Fibroblast (Epithelial).fragments.bed.gz	2807618
-Cardiac Pericyte 2.fragments.bed.gz	610749
-Cardiac Pericyte 1.fragments.bed.gz	1525035
-Endothelial (Exocrine Tissues).fragments.bed.gz	3769400
-Endothelial Cell (Myocardial).fragments.bed.gz	3006783
-Macrophage (General,Alveolar).fragments.bed.gz	5665369
-Mast Cell.fragments.bed.gz	5763209
-Fibroblast (Gastrointestinal).fragments.bed.gz	5864887
-Transitional Zone Cortical Cell.fragments.bed.gz	200191
-Pericyte (General) 2.fragments.bed.gz	2045919
-Cortical Epithelial-like.fragments.bed.gz	6746830
-Airway Goblet Cell.fragments.bed.gz	6672671
-Gastric Neuroendocrine Cell.fragments.bed.gz	7634412
-Granular Epidermal (Skin).fragments.bed.gz	858608
-Pericyte (General) 1.fragments.bed.gz	8496719
-Smooth Muscle (Esophageal Mucosal).fragments.bed.gz	2550634
-Smooth Muscle (Vaginal).fragments.bed.gz	4918
-Melanocyte.fragments.bed.gz	9183006
-Pericyte (General) 3.fragments.bed.gz	3420443
-Smooth Muscle (Esophageal Muscularis) 2.fragments.bed.gz	6164104
-Endothelial Cell (General) 3.fragments.bed.gz	4952220
-Astrocyte 2.fragments.bed.gz	10376641
-Paneth Cell.fragments.bed.gz	2446399
-Keratinocyte 1.fragments.bed.gz	12733667
-Thyroid Follicular Cell.fragments.bed.gz	1962802
-Cardiac Fibroblasts.fragments.bed.gz	12651991
-Satellite Cell.fragments.bed.gz	1310
-Plasma Cell.fragments.bed.gz	4140782
-Endocardial Cell.fragments.bed.gz	470670
-Pancreatic Delta,Gamma cell.fragments.bed.gz	3217656
-Type II Skeletal Myocyte.fragments.bed.gz	489094
-Endothelial Cell (General) 1.fragments.bed.gz	14313738
-Alverolar Type 2,Immune.fragments.bed.gz	1694987
-Mesothelial Cell.fragments.bed.gz	13253298
-T Lymphocyte 1 (CD8+).fragments.bed.gz	6383398
-Myoepithelial (Skin).fragments.bed.gz	2792906
-Naive T cell.fragments.bed.gz	11213826
-Lymphatic Endothelial Cell.fragments.bed.gz	13356666
-Smooth Muscle (General).fragments.bed.gz	17856730
-Cardiac Pericyte 4.fragments.bed.gz	661101
-Memory B Cell.fragments.bed.gz	16928671
-Alveolar Capillary Endothelial Cell.fragments.bed.gz	5825747
-Mammary Epithelial.fragments.bed.gz	19282301
-Tuft Cell.fragments.bed.gz	9467850
-Colon Epithelial Cell 1.fragments.bed.gz	14085071
-Smooth Muscle (Esophageal Muscularis) 1.fragments.bed.gz	38620
-Smooth Muscle (Uterine).fragments.bed.gz	6225
-Oligodendrocyte Precursor.fragments.bed.gz	2206168
-Foveolar Cell.fragments.bed.gz	80733
-Keratinocyte 2.fragments.bed.gz	3845698
-Fibroblast (Sk Muscle Associated).fragments.bed.gz	6836653
-Small Intestinal Goblet Cell.fragments.bed.gz	1928371
-Natural Killer T Cell.fragments.bed.gz	13945670
-Basal Epidermal (Skin).fragments.bed.gz	22699804
-Smooth Muscle (General Gastrointestinal).fragments.bed.gz	24729166
-Fibroblast (Peripheral Nerve).fragments.bed.gz	11985587
-Cilliated Cell.fragments.bed.gz	12065924
-Astrocyte 1.fragments.bed.gz	25333826
-Vascular Smooth Muscle 1.fragments.bed.gz	4937630
-Eccrine Epidermal (Skin).fragments.bed.gz	5231587
-Club Cell.fragments.bed.gz	10879306
-CNS,Enteric Neuron.fragments.bed.gz	1899358
-Parietal Cell.fragments.bed.gz	4434273
-Alveolar Type 1 (AT1) Cell.fragments.bed.gz	14409077
-Chief Cell.fragments.bed.gz	28811265
-Smooth Muscle (GE Junction).fragments.bed.gz	26268971
-Basal Epithelial (Mammary).fragments.bed.gz	7376715
-Atrial Cardiomyocyte.fragments.bed.gz	9852953
-Smooth Muscle (Esophageal Muscularis) 3.fragments.bed.gz	19965919
-Cardiac Pericyte 3.fragments.bed.gz	20139256
-Pericyte (Esophageal Muscularis).fragments.bed.gz	37245103
-Schwann Cell (General).fragments.bed.gz	15996372
-Pancreatic Acinar Cell.fragments.bed.gz	37810383
-Pericyte (General) 4.fragments.bed.gz	18412865
-Esophageal Epithelial Cell.fragments.bed.gz	16919883
-Smooth Muscle (Colon) 1.fragments.bed.gz	31750303
-Blood Brain Barrier Endothelial Cell.fragments.bed.gz	21240350
-GABAergic Neuron 1.fragments.bed.gz	32266087
-Mammary Luminal Epithelial Cell 1.fragments.bed.gz	29997227
-Pancreatic Beta Cell 2.fragments.bed.gz	46302235
-Colon Epithelial Cell 3.fragments.bed.gz	46866678
-Fibroblast (General).fragments.bed.gz	52414264
-Alveolar Type 2 (AT2) Cell.fragments.bed.gz	54765521
-Zona Fasciculata Cortical Cell.fragments.bed.gz	77751092
-Zona Glomerulosa Cortical Cell.fragments.bed.gz	77875390
-Peripheral Nerve Stromal.fragments.bed.gz	62846768
-Ventricular Cardiomyocyte.fragments.bed.gz	83095029
-Colonic Goblet Cell.fragments.bed.gz	122688067
-Pancreatic Beta Cell 1.fragments.bed.gz	130272571
-Vascular Smooth Muscle 2.fragments.bed.gz	122710233
-Mammary Luminal Epithelial Cell 2.fragments.bed.gz	131739644
-Luteal Cell (Ovarian).fragments.bed.gz	233265613
+cell_type	file	num_fragments
+Cardiac_Fibroblasts	/oak/stanford/groups/engreitz/Users/atan5133/data/CZI_scATAC/bingren_atlas/cell_type_fragment_files/Cardiac_Fibroblasts.fragments.bed.gz	2576
+Microglia	/oak/stanford/groups/engreitz/Users/atan5133/data/CZI_scATAC/bingren_atlas/cell_type_fragment_files/Microglia.fragments.bed.gz	1463
+Pancreatic_Beta_Cell_2	/oak/stanford/groups/engreitz/Users/atan5133/data/CZI_scATAC/bingren_atlas/cell_type_fragment_files/Pancreatic_Beta_Cell_2.fragments.bed.gz	80638
+Airway_Goblet_Cell	/oak/stanford/groups/engreitz/Users/atan5133/data/CZI_scATAC/bingren_atlas/cell_type_fragment_files/Airway_Goblet_Cell.fragments.bed.gz	660188
+Pancreatic_Acinar_Cell	/oak/stanford/groups/engreitz/Users/atan5133/data/CZI_scATAC/bingren_atlas/cell_type_fragment_files/Pancreatic_Acinar_Cell.fragments.bed.gz	488562
+Keratinocyte_1	/oak/stanford/groups/engreitz/Users/atan5133/data/CZI_scATAC/bingren_atlas/cell_type_fragment_files/Keratinocyte_1.fragments.bed.gz	610064
+Alverolar_Type_2_Immune	/oak/stanford/groups/engreitz/Users/atan5133/data/CZI_scATAC/bingren_atlas/cell_type_fragment_files/Alverolar_Type_2_Immune.fragments.bed.gz	975887
+Vascular_Smooth_Muscle_1	/oak/stanford/groups/engreitz/Users/atan5133/data/CZI_scATAC/bingren_atlas/cell_type_fragment_files/Vascular_Smooth_Muscle_1.fragments.bed.gz	1523354
+Hepatocyte	/oak/stanford/groups/engreitz/Users/atan5133/data/CZI_scATAC/bingren_atlas/cell_type_fragment_files/Hepatocyte.fragments.bed.gz	2367296
+Oligodendrocyte	/oak/stanford/groups/engreitz/Users/atan5133/data/CZI_scATAC/bingren_atlas/cell_type_fragment_files/Oligodendrocyte.fragments.bed.gz	2441598
+Adipocyte	/oak/stanford/groups/engreitz/Users/atan5133/data/CZI_scATAC/bingren_atlas/cell_type_fragment_files/Adipocyte.fragments.bed.gz	3049724
+Endothelial__Exocrine_Tissues_	/oak/stanford/groups/engreitz/Users/atan5133/data/CZI_scATAC/bingren_atlas/cell_type_fragment_files/Endothelial__Exocrine_Tissues_.fragments.bed.gz	2021431
+Pericyte__Esophageal_Muscularis_	/oak/stanford/groups/engreitz/Users/atan5133/data/CZI_scATAC/bingren_atlas/cell_type_fragment_files/Pericyte__Esophageal_Muscularis_.fragments.bed.gz	4135627
+Mammary_Epithelial	/oak/stanford/groups/engreitz/Users/atan5133/data/CZI_scATAC/bingren_atlas/cell_type_fragment_files/Mammary_Epithelial.fragments.bed.gz	1404951
+Cardiac_Pericyte_3	/oak/stanford/groups/engreitz/Users/atan5133/data/CZI_scATAC/bingren_atlas/cell_type_fragment_files/Cardiac_Pericyte_3.fragments.bed.gz	3213034
+Pancreatic_Delta_Gamma_cell	/oak/stanford/groups/engreitz/Users/atan5133/data/CZI_scATAC/bingren_atlas/cell_type_fragment_files/Pancreatic_Delta_Gamma_cell.fragments.bed.gz	6150730
+Zona_Glomerulosa_Cortical_Cell	/oak/stanford/groups/engreitz/Users/atan5133/data/CZI_scATAC/bingren_atlas/cell_type_fragment_files/Zona_Glomerulosa_Cortical_Cell.fragments.bed.gz	2971
+Smooth_Muscle__Colon__1	/oak/stanford/groups/engreitz/Users/atan5133/data/CZI_scATAC/bingren_atlas/cell_type_fragment_files/Smooth_Muscle__Colon__1.fragments.bed.gz	6209
+Luteal_Cell__Ovarian_	/oak/stanford/groups/engreitz/Users/atan5133/data/CZI_scATAC/bingren_atlas/cell_type_fragment_files/Luteal_Cell__Ovarian_.fragments.bed.gz	4932802
+Foveolar_Cell	/oak/stanford/groups/engreitz/Users/atan5133/data/CZI_scATAC/bingren_atlas/cell_type_fragment_files/Foveolar_Cell.fragments.bed.gz	857535
+Alveolar_Type_2__AT2__Cell	/oak/stanford/groups/engreitz/Users/atan5133/data/CZI_scATAC/bingren_atlas/cell_type_fragment_files/Alveolar_Type_2__AT2__Cell.fragments.bed.gz	2202543
+CNS_Enteric_Neuron	/oak/stanford/groups/engreitz/Users/atan5133/data/CZI_scATAC/bingren_atlas/cell_type_fragment_files/CNS_Enteric_Neuron.fragments.bed.gz	2788098
+Small_Intestinal_Enterocyte	/oak/stanford/groups/engreitz/Users/atan5133/data/CZI_scATAC/bingren_atlas/cell_type_fragment_files/Small_Intestinal_Enterocyte.fragments.bed.gz	3761743
+Endothelial_Cell__Myocardial_	/oak/stanford/groups/engreitz/Users/atan5133/data/CZI_scATAC/bingren_atlas/cell_type_fragment_files/Endothelial_Cell__Myocardial_.fragments.bed.gz	2545103
+Endocardial_Cell	/oak/stanford/groups/engreitz/Users/atan5133/data/CZI_scATAC/bingren_atlas/cell_type_fragment_files/Endocardial_Cell.fragments.bed.gz	0
+Smooth_Muscle__Vaginal_	/oak/stanford/groups/engreitz/Users/atan5133/data/CZI_scATAC/bingren_atlas/cell_type_fragment_files/Smooth_Muscle__Vaginal_.fragments.bed.gz	3841567
+Thyroid_Follicular_Cell	/oak/stanford/groups/engreitz/Users/atan5133/data/CZI_scATAC/bingren_atlas/cell_type_fragment_files/Thyroid_Follicular_Cell.fragments.bed.gz	5654473
+Peripheral_Nerve_Stromal	/oak/stanford/groups/engreitz/Users/atan5133/data/CZI_scATAC/bingren_atlas/cell_type_fragment_files/Peripheral_Nerve_Stromal.fragments.bed.gz	8485516
+Natural_Killer_T_Cell	/oak/stanford/groups/engreitz/Users/atan5133/data/CZI_scATAC/bingren_atlas/cell_type_fragment_files/Natural_Killer_T_Cell.fragments.bed.gz	469585
+Macrophage__General_Alveolar_	/oak/stanford/groups/engreitz/Users/atan5133/data/CZI_scATAC/bingren_atlas/cell_type_fragment_files/Macrophage__General_Alveolar_.fragments.bed.gz	0
+Melanocyte	/oak/stanford/groups/engreitz/Users/atan5133/data/CZI_scATAC/bingren_atlas/cell_type_fragment_files/Melanocyte.fragments.bed.gz	1233543
+Paneth_Cell	/oak/stanford/groups/engreitz/Users/atan5133/data/CZI_scATAC/bingren_atlas/cell_type_fragment_files/Paneth_Cell.fragments.bed.gz	1912553
+Ventricular_Cardiomyocyte	/oak/stanford/groups/engreitz/Users/atan5133/data/CZI_scATAC/bingren_atlas/cell_type_fragment_files/Ventricular_Cardiomyocyte.fragments.bed.gz	4428041
+Smooth_Muscle__Esophageal_Muscularis__1	/oak/stanford/groups/engreitz/Users/atan5133/data/CZI_scATAC/bingren_atlas/cell_type_fragment_files/Smooth_Muscle__Esophageal_Muscularis__1.fragments.bed.gz	7621583
+Pericyte__General__4	/oak/stanford/groups/engreitz/Users/atan5133/data/CZI_scATAC/bingren_atlas/cell_type_fragment_files/Pericyte__General__4.fragments.bed.gz	0
+Keratinocyte_2	/oak/stanford/groups/engreitz/Users/atan5133/data/CZI_scATAC/bingren_atlas/cell_type_fragment_files/Keratinocyte_2.fragments.bed.gz	6737491
+Pericyte__General__2	/oak/stanford/groups/engreitz/Users/atan5133/data/CZI_scATAC/bingren_atlas/cell_type_fragment_files/Pericyte__General__2.fragments.bed.gz	1299
+Fibroblast__Liver_Adrenal_	/oak/stanford/groups/engreitz/Users/atan5133/data/CZI_scATAC/bingren_atlas/cell_type_fragment_files/Fibroblast__Liver_Adrenal_.fragments.bed.gz	0
+Ductal_Cell__Pancreatic_	/oak/stanford/groups/engreitz/Users/atan5133/data/CZI_scATAC/bingren_atlas/cell_type_fragment_files/Ductal_Cell__Pancreatic_.fragments.bed.gz	1897563
+Granular_Epidermal__Skin_	/oak/stanford/groups/engreitz/Users/atan5133/data/CZI_scATAC/bingren_atlas/cell_type_fragment_files/Granular_Epidermal__Skin_.fragments.bed.gz	0
+Pericyte__General__1	/oak/stanford/groups/engreitz/Users/atan5133/data/CZI_scATAC/bingren_atlas/cell_type_fragment_files/Pericyte__General__1.fragments.bed.gz	0
+Lymphatic_Endothelial_Cell	/oak/stanford/groups/engreitz/Users/atan5133/data/CZI_scATAC/bingren_atlas/cell_type_fragment_files/Lymphatic_Endothelial_Cell.fragments.bed.gz	0
+Type_II_Skeletal_Myocyte	/oak/stanford/groups/engreitz/Users/atan5133/data/CZI_scATAC/bingren_atlas/cell_type_fragment_files/Type_II_Skeletal_Myocyte.fragments.bed.gz	2043021
+Endothelial_Cell__General__2	/oak/stanford/groups/engreitz/Users/atan5133/data/CZI_scATAC/bingren_atlas/cell_type_fragment_files/Endothelial_Cell__General__2.fragments.bed.gz	6009550
+Mammary_Luminal_Epithelial_Cell_1	/oak/stanford/groups/engreitz/Users/atan5133/data/CZI_scATAC/bingren_atlas/cell_type_fragment_files/Mammary_Luminal_Epithelial_Cell_1.fragments.bed.gz	0
+Eccrine_Epidermal__Skin_	/oak/stanford/groups/engreitz/Users/atan5133/data/CZI_scATAC/bingren_atlas/cell_type_fragment_files/Eccrine_Epidermal__Skin_.fragments.bed.gz	3003114
+T_Lymphocyte_1__CD8__	/oak/stanford/groups/engreitz/Users/atan5133/data/CZI_scATAC/bingren_atlas/cell_type_fragment_files/T_Lymphocyte_1__CD8__.fragments.bed.gz	199893
+Astrocyte_2	/oak/stanford/groups/engreitz/Users/atan5133/data/CZI_scATAC/bingren_atlas/cell_type_fragment_files/Astrocyte_2.fragments.bed.gz	6663879
+GABAergic_Neuron_1	/oak/stanford/groups/engreitz/Users/atan5133/data/CZI_scATAC/bingren_atlas/cell_type_fragment_files/GABAergic_Neuron_1.fragments.bed.gz	0
+Alveolar_Capillary_Endothelial_Cell	/oak/stanford/groups/engreitz/Users/atan5133/data/CZI_scATAC/bingren_atlas/cell_type_fragment_files/Alveolar_Capillary_Endothelial_Cell.fragments.bed.gz	3370729
+Tuft_Cell	/oak/stanford/groups/engreitz/Users/atan5133/data/CZI_scATAC/bingren_atlas/cell_type_fragment_files/Tuft_Cell.fragments.bed.gz	3668210
+Fibroblast__General_	/oak/stanford/groups/engreitz/Users/atan5133/data/CZI_scATAC/bingren_atlas/cell_type_fragment_files/Fibroblast__General_.fragments.bed.gz	0
+Smooth_Muscle__Esophageal_Mucosal_	/oak/stanford/groups/engreitz/Users/atan5133/data/CZI_scATAC/bingren_atlas/cell_type_fragment_files/Smooth_Muscle__Esophageal_Mucosal_.fragments.bed.gz	0
+Colon_Epithelial_Cell_1	/oak/stanford/groups/engreitz/Users/atan5133/data/CZI_scATAC/bingren_atlas/cell_type_fragment_files/Colon_Epithelial_Cell_1.fragments.bed.gz	0
+Fibroblast__Sk_Muscle_Associated_	/oak/stanford/groups/engreitz/Users/atan5133/data/CZI_scATAC/bingren_atlas/cell_type_fragment_files/Fibroblast__Sk_Muscle_Associated_.fragments.bed.gz	2804040
+Parietal_Cell	/oak/stanford/groups/engreitz/Users/atan5133/data/CZI_scATAC/bingren_atlas/cell_type_fragment_files/Parietal_Cell.fragments.bed.gz	12052793
+Schwann_Cell__General_	/oak/stanford/groups/engreitz/Users/atan5133/data/CZI_scATAC/bingren_atlas/cell_type_fragment_files/Schwann_Cell__General_.fragments.bed.gz	1958971
+Type_I_Skeletal_Myocyte	/oak/stanford/groups/engreitz/Users/atan5133/data/CZI_scATAC/bingren_atlas/cell_type_fragment_files/Type_I_Skeletal_Myocyte.fragments.bed.gz	0
+Cilliated_Cell	/oak/stanford/groups/engreitz/Users/atan5133/data/CZI_scATAC/bingren_atlas/cell_type_fragment_files/Cilliated_Cell.fragments.bed.gz	3415903
+Enterochromaffin_Cell	/oak/stanford/groups/engreitz/Users/atan5133/data/CZI_scATAC/bingren_atlas/cell_type_fragment_files/Enterochromaffin_Cell.fragments.bed.gz	0
+Pancreatic_Beta_Cell_1	/oak/stanford/groups/engreitz/Users/atan5133/data/CZI_scATAC/bingren_atlas/cell_type_fragment_files/Pancreatic_Beta_Cell_1.fragments.bed.gz	0
+Transitional_Zone_Cortical_Cell	/oak/stanford/groups/engreitz/Users/atan5133/data/CZI_scATAC/bingren_atlas/cell_type_fragment_files/Transitional_Zone_Cortical_Cell.fragments.bed.gz	11193306
+T_lymphocyte_2__CD4__	/oak/stanford/groups/engreitz/Users/atan5133/data/CZI_scATAC/bingren_atlas/cell_type_fragment_files/T_lymphocyte_2__CD4__.fragments.bed.gz	1925344
+Colon_Epithelial_Cell_2	/oak/stanford/groups/engreitz/Users/atan5133/data/CZI_scATAC/bingren_atlas/cell_type_fragment_files/Colon_Epithelial_Cell_2.fragments.bed.gz	0
+Cortical_Epithelial_like	/oak/stanford/groups/engreitz/Users/atan5133/data/CZI_scATAC/bingren_atlas/cell_type_fragment_files/Cortical_Epithelial_like.fragments.bed.gz	9170726
+Endothelial_Cell__General__1	/oak/stanford/groups/engreitz/Users/atan5133/data/CZI_scATAC/bingren_atlas/cell_type_fragment_files/Endothelial_Cell__General__1.fragments.bed.gz	586012
+Satellite_Cell	/oak/stanford/groups/engreitz/Users/atan5133/data/CZI_scATAC/bingren_atlas/cell_type_fragment_files/Satellite_Cell.fragments.bed.gz	5226381
+Astrocyte_1	/oak/stanford/groups/engreitz/Users/atan5133/data/CZI_scATAC/bingren_atlas/cell_type_fragment_files/Astrocyte_1.fragments.bed.gz	5756685
+Myoepithelial__Skin_	/oak/stanford/groups/engreitz/Users/atan5133/data/CZI_scATAC/bingren_atlas/cell_type_fragment_files/Myoepithelial__Skin_.fragments.bed.gz	0
+Mast_Cell	/oak/stanford/groups/engreitz/Users/atan5133/data/CZI_scATAC/bingren_atlas/cell_type_fragment_files/Mast_Cell.fragments.bed.gz	38576
+Memory_B_Cell	/oak/stanford/groups/engreitz/Users/atan5133/data/CZI_scATAC/bingren_atlas/cell_type_fragment_files/Memory_B_Cell.fragments.bed.gz	0
+Atrial_Cardiomyocyte	/oak/stanford/groups/engreitz/Users/atan5133/data/CZI_scATAC/bingren_atlas/cell_type_fragment_files/Atrial_Cardiomyocyte.fragments.bed.gz	970475
+Smooth_Muscle__Esophageal_Muscularis__2	/oak/stanford/groups/engreitz/Users/atan5133/data/CZI_scATAC/bingren_atlas/cell_type_fragment_files/Smooth_Muscle__Esophageal_Muscularis__2.fragments.bed.gz	4909
+Endothelial_Cell__General__3	/oak/stanford/groups/engreitz/Users/atan5133/data/CZI_scATAC/bingren_atlas/cell_type_fragment_files/Endothelial_Cell__General__3.fragments.bed.gz	6374119
+Fibroblast__Gastrointestinal_	/oak/stanford/groups/engreitz/Users/atan5133/data/CZI_scATAC/bingren_atlas/cell_type_fragment_files/Fibroblast__Gastrointestinal_.fragments.bed.gz	0
+Zona_Fasciculata_Cortical_Cell	/oak/stanford/groups/engreitz/Users/atan5133/data/CZI_scATAC/bingren_atlas/cell_type_fragment_files/Zona_Fasciculata_Cortical_Cell.fragments.bed.gz	1691981
+Cardiac_Pericyte_4	/oak/stanford/groups/engreitz/Users/atan5133/data/CZI_scATAC/bingren_atlas/cell_type_fragment_files/Cardiac_Pericyte_4.fragments.bed.gz	4944584
+Plasma_Cell	/oak/stanford/groups/engreitz/Users/atan5133/data/CZI_scATAC/bingren_atlas/cell_type_fragment_files/Plasma_Cell.fragments.bed.gz	0
+Alveolar_Type_1__AT1__Cell	/oak/stanford/groups/engreitz/Users/atan5133/data/CZI_scATAC/bingren_atlas/cell_type_fragment_files/Alveolar_Type_1__AT1__Cell.fragments.bed.gz	10361712
+Smooth_Muscle__Esophageal_Muscularis__3	/oak/stanford/groups/engreitz/Users/atan5133/data/CZI_scATAC/bingren_atlas/cell_type_fragment_files/Smooth_Muscle__Esophageal_Muscularis__3.fragments.bed.gz	1638571
+Pericyte__General__3	/oak/stanford/groups/engreitz/Users/atan5133/data/CZI_scATAC/bingren_atlas/cell_type_fragment_files/Pericyte__General__3.fragments.bed.gz	7360957
+Basal_Epidermal__Skin_	/oak/stanford/groups/engreitz/Users/atan5133/data/CZI_scATAC/bingren_atlas/cell_type_fragment_files/Basal_Epidermal__Skin_.fragments.bed.gz	0
+Smooth_Muscle__GE_Junction_	/oak/stanford/groups/engreitz/Users/atan5133/data/CZI_scATAC/bingren_atlas/cell_type_fragment_files/Smooth_Muscle__GE_Junction_.fragments.bed.gz	2938068
+Fibroblast__Epithelial_	/oak/stanford/groups/engreitz/Users/atan5133/data/CZI_scATAC/bingren_atlas/cell_type_fragment_files/Fibroblast__Epithelial_.fragments.bed.gz	0
+Naive_T_cell	/oak/stanford/groups/engreitz/Users/atan5133/data/CZI_scATAC/bingren_atlas/cell_type_fragment_files/Naive_T_cell.fragments.bed.gz	0
+Small_Intestinal_Goblet_Cell	/oak/stanford/groups/engreitz/Users/atan5133/data/CZI_scATAC/bingren_atlas/cell_type_fragment_files/Small_Intestinal_Goblet_Cell.fragments.bed.gz	13235015
+Colon_Epithelial_Cell_3	/oak/stanford/groups/engreitz/Users/atan5133/data/CZI_scATAC/bingren_atlas/cell_type_fragment_files/Colon_Epithelial_Cell_3.fragments.bed.gz	6823825
+Fibroblast__Peripheral_Nerve_	/oak/stanford/groups/engreitz/Users/atan5133/data/CZI_scATAC/bingren_atlas/cell_type_fragment_files/Fibroblast__Peripheral_Nerve_.fragments.bed.gz	0
+Colonic_Goblet_Cell	/oak/stanford/groups/engreitz/Users/atan5133/data/CZI_scATAC/bingren_atlas/cell_type_fragment_files/Colonic_Goblet_Cell.fragments.bed.gz	0
+Cardiac_Pericyte_1	/oak/stanford/groups/engreitz/Users/atan5133/data/CZI_scATAC/bingren_atlas/cell_type_fragment_files/Cardiac_Pericyte_1.fragments.bed.gz	5857881
+Macrophage__General_	/oak/stanford/groups/engreitz/Users/atan5133/data/CZI_scATAC/bingren_atlas/cell_type_fragment_files/Macrophage__General_.fragments.bed.gz	11958743
+Mammary_Luminal_Epithelial_Cell_2	/oak/stanford/groups/engreitz/Users/atan5133/data/CZI_scATAC/bingren_atlas/cell_type_fragment_files/Mammary_Luminal_Epithelial_Cell_2.fragments.bed.gz	9841848
+Pancreatic_Alpha_Cell_2	/oak/stanford/groups/engreitz/Users/atan5133/data/CZI_scATAC/bingren_atlas/cell_type_fragment_files/Pancreatic_Alpha_Cell_2.fragments.bed.gz	9445873
+Smooth_Muscle__General_	/oak/stanford/groups/engreitz/Users/atan5133/data/CZI_scATAC/bingren_atlas/cell_type_fragment_files/Smooth_Muscle__General_.fragments.bed.gz	0
+Mesothelial_Cell	/oak/stanford/groups/engreitz/Users/atan5133/data/CZI_scATAC/bingren_atlas/cell_type_fragment_files/Mesothelial_Cell.fragments.bed.gz	13338404
+Smooth_Muscle__Colon__2	/oak/stanford/groups/engreitz/Users/atan5133/data/CZI_scATAC/bingren_atlas/cell_type_fragment_files/Smooth_Muscle__Colon__2.fragments.bed.gz	5816347
+Esophageal_Epithelial_Cell	/oak/stanford/groups/engreitz/Users/atan5133/data/CZI_scATAC/bingren_atlas/cell_type_fragment_files/Esophageal_Epithelial_Cell.fragments.bed.gz	10864016
+Chief_Cell	/oak/stanford/groups/engreitz/Users/atan5133/data/CZI_scATAC/bingren_atlas/cell_type_fragment_files/Chief_Cell.fragments.bed.gz	13921717
+Pancreatic_Alpha_Cell_1	/oak/stanford/groups/engreitz/Users/atan5133/data/CZI_scATAC/bingren_atlas/cell_type_fragment_files/Pancreatic_Alpha_Cell_1.fragments.bed.gz	0
+Club_Cell	/oak/stanford/groups/engreitz/Users/atan5133/data/CZI_scATAC/bingren_atlas/cell_type_fragment_files/Club_Cell.fragments.bed.gz	14040471
+Blood_Brain_Barrier_Endothelial_Cell	/oak/stanford/groups/engreitz/Users/atan5133/data/CZI_scATAC/bingren_atlas/cell_type_fragment_files/Blood_Brain_Barrier_Endothelial_Cell.fragments.bed.gz	12713554
+Cardiac_Pericyte_2	/oak/stanford/groups/engreitz/Users/atan5133/data/CZI_scATAC/bingren_atlas/cell_type_fragment_files/Cardiac_Pericyte_2.fragments.bed.gz	20113384
+Smooth_Muscle__Uterine_	/oak/stanford/groups/engreitz/Users/atan5133/data/CZI_scATAC/bingren_atlas/cell_type_fragment_files/Smooth_Muscle__Uterine_.fragments.bed.gz	22664451
+Oligodendrocyte_Precursor	/oak/stanford/groups/engreitz/Users/atan5133/data/CZI_scATAC/bingren_atlas/cell_type_fragment_files/Oligodendrocyte_Precursor.fragments.bed.gz	21204818
+Gastric_Neuroendocrine_Cell	/oak/stanford/groups/engreitz/Users/atan5133/data/CZI_scATAC/bingren_atlas/cell_type_fragment_files/Gastric_Neuroendocrine_Cell.fragments.bed.gz	24694674
+Smooth_Muscle__General_Gastrointestinal_	/oak/stanford/groups/engreitz/Users/atan5133/data/CZI_scATAC/bingren_atlas/cell_type_fragment_files/Smooth_Muscle__General_Gastrointestinal_.fragments.bed.gz	31702528
+Vascular_Smooth_Muscle_2	/oak/stanford/groups/engreitz/Users/atan5133/data/CZI_scATAC/bingren_atlas/cell_type_fragment_files/Vascular_Smooth_Muscle_2.fragments.bed.gz	0
+Basal_Epithelial__Mammary_	/oak/stanford/groups/engreitz/Users/atan5133/data/CZI_scATAC/bingren_atlas/cell_type_fragment_files/Basal_Epithelial__Mammary_.fragments.bed.gz	77738092

@@ -1,0 +1,3 @@
+fragment_tsv: "cell_frag_counts_filtered.tsv"
+output_folder: "/oak/stanford/groups/engreitz/Users/atan5133/data/CZI_scATAC/bingren_atlas/cell_type_tagAlign_files"
+chrom_bed: "GRCh38_EBV.no_alt.chrom.sizes.tsv.bed"

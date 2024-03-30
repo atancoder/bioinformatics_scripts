@@ -1,0 +1,47 @@
+from snakemake.utils import min_version
+import os
+import pandas as pd
+
+min_version("7.0")
+configfile: "snakefile_config.yml"
+conda: "mamba"
+
+OUTPUT_FOLDER = config["output_folder"]
+CHROM_BED = config["chrom_bed"]
+FRAGMENTS_DF = pd.read_csv(config["fragment_tsv"], sep='\t', index_col=0)
+
+
+def get_tagAlign_files(df, output_folder):
+    tagAlign_files = []
+    for cell_type, row in df.iterrows():
+        tagAlign = os.path.join(output_folder, f"{cell_type}.tagAlign.gz")
+        tbi = tagAlign + ".tbi"
+        tagAlign_files += [tagAlign, tbi]
+    return tagAlign_files
+
+def determine_frag_file(wildcards):
+    return FRAGMENTS_DF.loc[wildcards.CELL_TYPE, "file"]
+
+
+rule all:
+    input:
+        get_tagAlign_files(FRAGMENTS_DF, OUTPUT_FOLDER)
+
+rule create_and_index_tagAlign: 
+    input:
+        frag_file = determine_frag_file
+    conda:
+        "../env.yml"
+    output: 
+        tagAlign = os.path.join(OUTPUT_FOLDER, "{CELL_TYPE}.tagAlign.gz"),
+        tbi_file = os.path.join(OUTPUT_FOLDER, "{CELL_TYPE}.tagAlign.gz.tbi")
+    threads: 4
+    resources:
+        mem_mb=10000
+    shell: 
+        """
+        LC_ALL=C bedtools intersect -nonamecheck -a {input.frag_file} -b {CHROM_BED} | sed -e '/^#/d' -e '/^chrM/d' \
+        | awk -v OFS='\t' '{{mid=int(($2+$3)/2); print $1,$2,mid,"N",1000,"+"; print $1,mid+1,$3,"N",1000,"-"}}' \
+        | sort -k 1,1V -k 2,2n -k3,3n --parallel 4 \
+        | bgzip -c -@4 > {output.tagAlign} && tabix -p bed {output.tagAlign}
+        """

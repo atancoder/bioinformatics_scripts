@@ -53,8 +53,8 @@ def compute_crispr_overlaps(
         on=[DFSchema.TARGET_GENE],
         suffixes=[DFSchema.CRISPR_SUFFIX, DFSchema.PRED_SUFFIX],
     )
-    overlap_df[DFSchema.IS_SIGNIFICANT + DFSchema.PRED_SUFFIX].fillna(
-        False, inplace=True
+    overlap_df[DFSchema.IS_SIGNIFICANT + DFSchema.PRED_SUFFIX] = overlap_df[DFSchema.IS_SIGNIFICANT + DFSchema.PRED_SUFFIX].fillna(
+        False
     )
     return overlap_df
 
@@ -63,11 +63,11 @@ def merge_multiple_predictions(
     overlap_df: pd.DataFrame,
     threshold: float,
     score_col: str = "ABC.Score",
-    agg_fn=np.max,
+    agg_fn=np.sum,
 ) -> pd.DataFrame:
     """
     When there are multiple matching predictions for a crispri experiment,
-    we aggregate the ABC scores (default max)
+    we aggregate the ABC scores (default sum)
     """
     score_col = score_col + DFSchema.PRED_SUFFIX
     name_col = "name" + DFSchema.CRISPR_SUFFIX
@@ -91,8 +91,8 @@ def merge_multiple_predictions(
 
 
 def write_overlaps_to_file(overlap_df: pd.DataFrame, file: str) -> None:
-    overlap_df.to_csv(file, index=False)
+    overlap_df.to_csv(file, index=False, sep='\t')
 
 
 def read_overlaps_from_file(file: str) -> pd.DataFrame:
-    return pd.read_csv(file)
+    return pd.read_csv(file, sep='\t')

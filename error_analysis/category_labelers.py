@@ -44,7 +44,9 @@ class FalsePos(CategoryLabeler):
 
     @classmethod
     def summarize_category_count(cls, df: pd.DataFrame) -> pd.Series:
-        return super().summarize_category_count(df).filter([True])
+        true_counts = super().summarize_category_count(df)[True]
+        new_series = pd.Series({"True": true_counts}, name=cls.name())
+        return new_series
 
 
 class FalseNeg(CategoryLabeler):
@@ -56,7 +58,9 @@ class FalseNeg(CategoryLabeler):
 
     @classmethod
     def summarize_category_count(cls, df: pd.DataFrame) -> pd.Series:
-        return super().summarize_category_count(df).filter([True])
+        true_counts = super().summarize_category_count(df)[True]
+        new_series = pd.Series({"True": true_counts}, name=cls.name())
+        return new_series
 
 
 class DistToTSSSize(CategoryLabeler):
@@ -112,7 +116,9 @@ class MultiplePredictions(CategoryLabeler):
     def summarize_category_count(cls, df: pd.DataFrame) -> pd.Series:
         column_name = DFSchema.FROM_MULTIPLE_PREDICTIONS
         col = df[column_name]
-        return col.value_counts().filter([True])
+        true_counts = col.value_counts()[True]
+        new_series = pd.Series({"True": true_counts}, name=cls.name())
+        return new_series
 
 
 class EnhancerSize(CategoryLabeler):
