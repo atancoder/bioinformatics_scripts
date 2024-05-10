@@ -1,8 +1,7 @@
 """
 Partitions a frag file into multiple files based on fragment length
 
-py partition_frag_file.py /oak/stanford/groups/engreitz/Users/atan5133/data/ENCODE/K562_ATAC/ENCFF534DCE.sorted.
-tsv /oak/stanford/groups/engreitz/Users/atan5133/data/ENCODE/K562_ATAC/binned_atac/
+py partition_frag_file.py /oak/stanford/groups/engreitz/Projects/scE2G/data/xu_et_al/fragment.tsv /oak/stanford/groups/engreitz/Users/atan5133/data/scATAC/bins/
 """
 
 import os
@@ -10,7 +9,7 @@ import os
 import click
 import pandas as pd
 
-BINS = [(0, 100), (180, 247), (315, 473), (558, 615)]
+BINS = [(0, 147), (180, 314), (315, 473), (474, 615)]
 
 
 @click.command()
