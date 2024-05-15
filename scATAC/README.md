@@ -32,7 +32,11 @@ Create biosamples.config for ABC
 py gen_biosamples.py --tagAlign_folder /oak/stanford/groups/engreitz/Users/atan5133/data/CZI_scATAC/bingren_atlas/cell_type_tagAlign_files --output biosamples_config.tsv
 ```
 
-For Stitziel Multiome
+## For Stitziel Multiome
+```
+py preprocess_metadata.py --metadata /oak/stanford/groups/engreitz/Users/atan5133/data/stitziel_multiome/meta/coronary_multiome_meta.tsv --fragments /oak/stanford/groups/engreitz/Users/atan5133/data/stitziel_multiome/fragments --output /oak/stanford/groups/engreitz/Users/atan5133/data/stitziel_multiome/stitziel_multiome_meta.tsv.gz
+```
+
 ```
 py create_fragments_per_cell_type.py --metadata /oak/stanford/groups/engreitz/Users/atan5133/data/stitziel_multiome/stitziel_multiome_meta.tsv.gz --output_folder /oak/stanford/groups/engreitz/Users/atan5133/data/stitziel_multiome/cell_type_fragment_files --chromosomes GRCh38_EBV.no_alt.chrom.sizes.tsv
 ```
