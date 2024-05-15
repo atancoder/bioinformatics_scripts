@@ -14,11 +14,13 @@ from collections import defaultdict
 CHUNK_SIZE = 30  
 
 def map_columns_to_cell_type(columns, metadata_df):
-    cell_type_cols = defaultdict(list)
+    cell_type_cols = {}
     for col in columns:
         first, second, third, fourth = col.split(".")
         cell_id = f"{first}-{second}#{third}-{fourth}"
         cell_type = metadata_df.loc[cell_id]["cell_type"]
+        if cell_type not in cell_type_cols:
+            cell_type_cols[cell_type] = ["Gene"]
         cell_type_cols[cell_type].append(col)
     
     return cell_type_cols
@@ -38,7 +40,7 @@ def create_cell_type_rna_files(rna_df, cell_type_cols, output_folder):
 def main(rna_tsv, metadata_tsv, output_folder) -> None:
     metadata_df = pd.read_csv(metadata_tsv, sep="\t", index_col=0)
     rna_df = pd.read_csv(rna_tsv, sep="\t", nrows=0)  # Just want the column names
-    cell_type_cols = map_columns_to_cell_type(rna_df.columns, metadata_df)
+    cell_type_cols = map_columns_to_cell_type(list(rna_df.columns)[1:], metadata_df)
     cell_type_files = create_cell_type_rna_files(rna_df, cell_type_cols, output_folder)
 
     with pd.read_csv(rna_tsv, sep="\t", skiprows=1, chunksize=CHUNK_SIZE, names=rna_df.columns) as reader:
@@ -48,3 +50,4 @@ def main(rna_tsv, metadata_tsv, output_folder) -> None:
         
 if __name__ == "__main__":
     main()
+
