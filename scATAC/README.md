@@ -32,8 +32,14 @@ Create biosamples.config for ABC
 py gen_biosamples.py --tagAlign_folder /oak/stanford/groups/engreitz/Users/atan5133/data/CZI_scATAC/bingren_atlas/cell_type_tagAlign_files --output biosamples_config.tsv
 ```
 
+For Stitziel Multiome
+```
+py create_fragments_per_cell_type.py --metadata /oak/stanford/groups/engreitz/Users/atan5133/data/stitziel_multiome/stitziel_multiome_meta.tsv.gz --output_folder /oak/stanford/groups/engreitz/Users/atan5133/data/stitziel_multiome/cell_type_fragment_files --chromosomes GRCh38_EBV.no_alt.chrom.sizes.tsv
+```
 
 To split an aggregated RNA matrix into cell type specific RNA matrices
 ```
 py split_rna_matrix.py --rna /oak/stanford/groups/engreitz/Users/atan5133/data/stitziel_multiome/counts/coronary_multiome_RNA.tsv --metadata /oak/stanford/groups/engreitz/Users/atan5133/data/stitziel_multiome/stitziel_multiome_meta.tsv.gz --output_folder /oak/stanford/groups/engreitz/Users/atan5133/data/stitziel_multiome/cell_type_rna_matrices
 ```
+
+

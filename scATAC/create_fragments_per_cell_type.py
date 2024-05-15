@@ -1,12 +1,13 @@
-import click
-import pandas as pd
+import concurrent.futures
 import glob
-import time
+import gzip
 import os
 import re
-import gzip
-import concurrent.futures
 import subprocess
+import time
+
+import click
+import pandas as pd
 
 NUM_THREADS = 32
 
@@ -28,16 +29,15 @@ def split_sample(frag_file, metadata_df, chromosomes, output_folder):
     sample_name = metadata_df[metadata_df["frag_file"] == frag_file].iloc[0]["sample"]
     cell_type_files = {}
     fragments_written = 0
-    replicate = find_replicate_number(frag_file)
+    # replicate = find_replicate_number(frag_file)
     with gzip.open(frag_file, "rt") as f:
         for line in f:
             if line.startswith("#"):
                 continue
-            barcode = line.split("\t")[3]
-            chrom = line.split("\t")[0]
+            chrom, start, end, barcode, read_count = line.split("\t")
             if chrom not in chromosomes:
                 continue
-            cell_id = f"{sample_name}_{replicate}+{barcode}"
+            cell_id = f"{sample_name}#{barcode}"
             if cell_id in metadata_df.index:
                 row = metadata_df.loc[cell_id]
                 cell_type = row["cell_type"]
@@ -48,6 +48,8 @@ def split_sample(frag_file, metadata_df, chromosomes, output_folder):
                         ),
                         "wt",
                     )
+                barcode = f"{sample_name}.{barcode}".replace('-', '.')
+                line = "\t".join([chrom, start, end, barcode, read_count])
                 cell_type_files[cell_type].write(line)
                 fragments_written += 1
 
