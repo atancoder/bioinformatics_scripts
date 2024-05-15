@@ -1,0 +1,49 @@
+from snakemake.utils import min_version
+import os
+import pandas as pd
+
+"""
+Snakefile to sort and index fragment files
+"""
+
+min_version("7.0")
+configfile: "snakefile_config.yml"
+conda: "mamba"
+
+OUTPUT_FOLDER = config["output_folder"]
+CHROM_BED = config["chrom_bed"]
+FRAGMENTS_DF = pd.read_csv(config["fragment_tsv"], sep='\t', index_col=0)
+
+
+def get_indexed_fragments(df, output_folder):
+    indexed_fragments = []
+    for cell_type, row in df.iterrows():
+        sorted_fragment = os.path.join(output_folder, f"{cell_type}.fragments.sorted.bed.gz")
+        tbi = sorted_fragment + ".tbi"
+        indexed_fragments += [sorted_fragment, tbi]
+    return indexed_fragments
+
+def determine_frag_file(wildcards):
+    return FRAGMENTS_DF.loc[wildcards.CELL_TYPE, "file"]
+
+
+rule all:
+    input:
+        get_indexed_fragments(FRAGMENTS_DF, OUTPUT_FOLDER)
+
+rule sorted_and_index_fragment: 
+    input:
+        frag_file = determine_frag_file
+    conda:
+        "../env.yml"
+    output: 
+        sorted_fragment = os.path.join(OUTPUT_FOLDER, "{CELL_TYPE}.fragments.sorted.bed.gz"),
+        tbi_file = os.path.join(OUTPUT_FOLDER, "{CELL_TYPE}.fragments.sorted.bed.gz.tbi")
+    threads: 4
+    resources:
+        mem_mb=10000
+    shell: 
+        """
+		LC_ALL=C zcat {input.frag_file} | sort -k 1,1V -k 2,2n -k3,3n --parallel 4 | 
+		bgzip -c -@4 > {output.sorted_fragment} && tabix -p bed {output.sorted_fragment}
+        """
